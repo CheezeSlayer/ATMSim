@@ -118,8 +118,8 @@ int main () {
       //listATMs( ATMarray , numATMs );
     }
 
-    cout << "Time " << currentMinutes << " Pre-Process" << endl;
-    listATMs( ATMarray , numATMs , currentMinutes );
+    //cout << "Time " << currentMinutes << " Pre-Process" << endl;
+    //listATMs( ATMarray , numATMs , currentMinutes );
 
     //cout << "Time: " << currentMinutes << " Queue Sizes" << endl;
     for ( atmIndex = 0; atmIndex < numATMs; atmIndex++ )
@@ -127,7 +127,7 @@ int main () {
       queueSizes[atmIndex] = ATMarray[atmIndex].line.queueSize;
       //cout << queueSizes[atmIndex] << " ";
     }
-    cout << endl;
+    //cout << endl;
 
     for ( atmIndex = 0; atmIndex < numATMs; atmIndex++ )
     {
@@ -143,14 +143,14 @@ int main () {
     {
       if ( ATMarray[atmIndex].line.queueSize > 0 )
       {
-        cout << "Updated Total Wait Time at Time: " << currentMinutes << endl;
+        //cout << "Updated Total Wait Time at Time: " << currentMinutes << endl;
         if (  ATMarray[atmIndex].line.queueSize != queueSizes[atmIndex] )
         {
           total_wait_time = total_wait_time + (currentMinutes - ATMarray[atmIndex].line.front->user.atime);
         }
       }
     }
-    cout << endl;
+    //cout << endl;
     //cout << "Time: " << currentMinutes << " Total Wait Time: " << total_wait_time << endl;
 
 /*
